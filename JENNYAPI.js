@@ -49,8 +49,8 @@
     script.src = 'https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js';
     script.type = 'module';
     document.head.appendChild(script);
-   // let ht = localStorage.getItem('pytems:hidethanks');
-   // let items = localStorage.getItem('infinite-craft-data')
+    let ht = localStorage.getItem('pytems:hidethanks');
+    let items = localStorage.getItem('infinite-craft-data')
     if (items === null) {
         items = {"elements":[{"text":"Water","emoji":"💧","discovered":false},{"text":"Fire","emoji":"🔥","discovered":false},{"text":"Wind","emoji":"🌬️","discovered":false},{"text":"Earth","emoji":"🌍","discovered":false}]}
     } else {
@@ -61,7 +61,7 @@
         localStorage.setItem('infinite-craft-data', JSON.stringify(items));
     } else {
         localStorage.setItem('infinite-craft-data', JSON.stringify(items))
-     //   let thanks = {"text":"Thank you for using Pytems","emoji":"🍉","discovered":false}
+//        let thanks = {"text":"Thank you for using Pytems","emoji":"🍉","discovered":false}
         if (!items.elements.some(e => e.text === thanks.text)) {
             items.elements.unshift(thanks)
     
